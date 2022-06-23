@@ -1,15 +1,19 @@
 #include <Simple-Path-Tracer/Sphere.h>
 
 #include <Simple-Path-Tracer/HitInfo.h>
+#include <Simple-Path-Tracer/Material.h>
 
 #include <glm/glm.hpp>
 
-#include <iostream>
-
-Sphere::Sphere() {}
-
-Sphere::Sphere(const glm::vec3& otherCenter, const float otherRadius)
-: m_center(otherCenter), m_radius(otherRadius) {}
+Sphere::Sphere(
+      const glm::vec3& otherCenter,
+      const float otherRadius,
+      Material* otherMaterial
+) : m_center(otherCenter), m_radius(otherRadius)
+{ 
+   // Protected member of base class "Surface"
+   m_material = otherMaterial;
+}
 
 glm::vec3 Sphere::getCenter() const
 {
@@ -22,12 +26,12 @@ float Sphere::getRadius() const
 }
 
 bool Sphere::isHitted(
-      const Ray& ray, const float tMin, const float tMax, HitInfo& hitInfo
+      const Ray& inRay, const float tMin, const float tMax, HitInfo& hitInfo
 ) {
-   glm::vec3 oc = ray.getOrigin() - m_center;
+   glm::vec3 oc = inRay.getOrigin() - m_center;
    // Optimize y saque los 2(cancele).
-   float a = glm::dot(ray.getDirection(), ray.getDirection());
-   float b = glm::dot(ray.getDirection(), oc);
+   float a = glm::dot(inRay.getDirection(), inRay.getDirection());
+   float b = glm::dot(inRay.getDirection(), oc);
    float c = glm::dot(oc, oc) - (m_radius * m_radius);
 
    float discriminant = b * b - a * c;
@@ -45,12 +49,12 @@ bool Sphere::isHitted(
       if (t1 < t2 && t1 > tMin && t1 < tMax)
       {
          hitInfo.t   = t1;
-         hitInfo.pos = ray.getPointAtParameter(t1);
+         hitInfo.pos = inRay.getPointAtParameter(t1);
       }
       else if (t2 < t1 && t2 > tMin && t2 < tMax)
       {
          hitInfo.t   = t2;
-         hitInfo.pos = ray.getPointAtParameter(t2);
+         hitInfo.pos = inRay.getPointAtParameter(t2);
       }
       else
          return false;
@@ -63,4 +67,7 @@ bool Sphere::isHitted(
    return false;
 }
 
-Sphere::~Sphere() = default;
+Sphere::~Sphere()
+{
+   delete m_material;
+}

@@ -1018,11 +1018,31 @@ detail/func_vector_relational.inl
 Simple-Path-Tracer/Ray.h
 -
 
+../src/Simple-Path-Tracer/Diffuse.h
+Simple-Path-Tracer/Material.h
+-
+glm/glm.hpp
+-
+
 ../src/Simple-Path-Tracer/HitInfo.h
 glm/glm.hpp
 -
 
 ../src/Simple-Path-Tracer/Hitable.h
+Simple-Path-Tracer/Ray.h
+-
+Simple-Path-Tracer/HitInfo.h
+-
+Simple-Path-Tracer/Material.h
+-
+glm/glm.hpp
+-
+memory
+-
+iostream
+-
+
+../src/Simple-Path-Tracer/Material.h
 Simple-Path-Tracer/Ray.h
 -
 Simple-Path-Tracer/HitInfo.h
@@ -1057,13 +1077,25 @@ Simple-Path-Tracer/Ray.h
 -
 Simple-Path-Tracer/HitInfo.h
 -
+Simple-Path-Tracer/Material.h
+-
 glm/glm.hpp
 -
 
 ../src/Simple-Path-Tracer/config.h
 
+../src/Simple-Path-Tracer/util.h
+glm/glm.hpp
+-
+random
+-
+
 /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/PathTracer.cpp
 Simple-Path-Tracer/PathTracer.h
+-
+Simple-Path-Tracer/config.h
+-
+Simple-Path-Tracer/util.h
 -
 Simple-Path-Tracer/Camera.h
 -
@@ -1071,7 +1103,11 @@ Simple-Path-Tracer/Ray.h
 -
 Simple-Path-Tracer/Sphere.h
 -
-Simple-Path-Tracer/config.h
+Simple-Path-Tracer/Material.h
+-
+Simple-Path-Tracer/Diffuse.h
+-
+glm/glm.hpp
 -
 iostream
 -
@@ -1080,7 +1116,5 @@ vector
 memory
 -
 limits
--
-random
 -
 

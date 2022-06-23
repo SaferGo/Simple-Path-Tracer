@@ -5,10 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Camera.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o"
+  "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Diffuse.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/PathTracer.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Ray.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Sphere.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/main.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/main.cpp.o"
+  "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/util.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

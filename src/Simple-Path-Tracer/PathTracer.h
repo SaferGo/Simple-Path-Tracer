@@ -25,6 +25,5 @@ private:
    glm::vec3 getColor(
          const Ray& ray, std::vector<std::unique_ptr<Hitable>>& world
    ) const;
-   // in utilitis....
-   glm::vec3 getRandDirection() const;
+   glm::vec3 gammaCorrection(const glm::vec3& pixelColor) const;
 };

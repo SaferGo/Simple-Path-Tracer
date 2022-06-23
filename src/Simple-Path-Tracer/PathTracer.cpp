@@ -1,21 +1,21 @@
 #include <Simple-Path-Tracer/PathTracer.h>
 
+#include <Simple-Path-Tracer/config.h>
+#include <Simple-Path-Tracer/util.h>
 #include <Simple-Path-Tracer/Camera.h>
 #include <Simple-Path-Tracer/Ray.h>
 #include <Simple-Path-Tracer/Sphere.h>
-#include <Simple-Path-Tracer/config.h>
+#include <Simple-Path-Tracer/Material.h>
+#include <Simple-Path-Tracer/Diffuse.h>
+
+#include <glm/glm.hpp>
 
 #include <iostream>
 #include <vector>
 #include <memory>
 #include <limits>
-#include <random>
 
 #define MAX_FLOAT std::numeric_limits<float>::max()
-
-// in utilitis
-std::mt19937 gen = std::mt19937(time(0));
-std::uniform_real_distribution<> randd(0.0, 1.0);
 
 PathTraicer::PathTraicer() {}
 
@@ -33,21 +33,9 @@ void PathTraicer::run()
    }
 }
 
-// Gets a random direction from the unit sphere
-glm::vec3 PathTraicer::getRandDirection() const
+glm::vec3 PathTraicer::gammaCorrection(const glm::vec3& pixelColor) const
 {
-   glm::vec3 newDirection;
-   
-   do
-   {
-      newDirection = glm::vec3(
-            (randd(gen) * 2.0) - 1.0,
-            (randd(gen) * 2.0) - 1.0,
-            (randd(gen) * 2.0) - 1.0
-      );
-   } while(glm::dot(newDirection, newDirection) >= 1.0);
-
-   return newDirection;
+   return glm::sqrt(pixelColor);
 }
 
 glm::vec3 PathTraicer::getColor(
@@ -56,8 +44,9 @@ glm::vec3 PathTraicer::getColor(
 ) const {
 
    HitInfo hitInfo;
-   glm::vec3 normal(0.0);
+   Material* material;
    glm::vec3 closestHit(MAX_FLOAT);
+   glm::vec3 normal(0.0);
 
    bool somethingWasHitted = false;
    for (auto& object : world)
@@ -67,8 +56,9 @@ glm::vec3 PathTraicer::getColor(
          if (glm::distance(hitInfo.pos , ray.getOrigin()) <
              glm::distance(closestHit, ray.getOrigin())
          ) {
-            closestHit = hitInfo.pos;
-            normal     = hitInfo.normal;
+            material     = object->getMaterial();
+            closestHit   = hitInfo.pos;
+            normal       = hitInfo.normal;
 
             somethingWasHitted = true;
          }
@@ -77,9 +67,20 @@ glm::vec3 PathTraicer::getColor(
 
    if (somethingWasHitted)
    {
-      Ray newBouncingRay = Ray(closestHit, normal + getRandDirection());
+      bool isAbsorved = false;
 
-      return (0.5f * getColor(newBouncingRay, world));
+      Ray reflectedRay = material->getReflectedRay(
+            closestHit, normal, isAbsorved
+      );
+
+      if (isAbsorved)
+         return glm::vec3(0.0);
+      else
+      {
+         glm::vec3 attenuation = material->getAlbedo();
+
+         return attenuation * getColor(reflectedRay, world);
+      }
    }
 
    return glm::vec3(0.9, 0.8, 0.5);
@@ -92,8 +93,20 @@ void PathTraicer::render(std::fstream& img)
    img << "255\n";
 
    std::vector<std::unique_ptr<Hitable>> world;
-   world.push_back(std::make_unique<Sphere>(glm::vec3(0.0, 0.0, -1.0), 0.5));
-   world.push_back(std::make_unique<Sphere>(glm::vec3(0.0, -100.5, -1.0), 100.0));
+   world.push_back(
+         std::make_unique<Sphere>(
+            glm::vec3(0.0, 0.0, -1.0),
+            0.5,
+            new Diffuse(glm::vec3(0.8, 0.3, 0.3))
+         )
+   );
+   world.push_back(
+         std::make_unique<Sphere>(
+            glm::vec3(0.0, -100.5, -1.0),
+            100.0,
+            new Diffuse(glm::vec3(0.8, 0.8, 0.0))
+         )
+   );
       
    Camera camera(
          glm::vec3(0.0),              // origin
@@ -111,14 +124,18 @@ void PathTraicer::render(std::fstream& img)
          // Antialiasing
          for (int p = 0; p < config::N_SAMPLES; p++)
          {
-            const float u = float(j + randd(gen)) / float(config::RESOLUTION_W);
-            const float v = float(i + randd(gen)) / float(config::RESOLUTION_H);
+            const float u = 
+               float(j + util::getRand01()) / float(config::RESOLUTION_W);
+            const float v = 
+               float(i + util::getRand01()) / float(config::RESOLUTION_H);
 
             Ray ray = camera.getRay(u, v);
             pixelColor += getColor(ray, world);
          }
 
          pixelColor /= float(config::N_SAMPLES);
+
+         pixelColor = gammaCorrection(pixelColor);
 
          const unsigned int newR = int(255.99 * pixelColor.x);
          const unsigned int newG = int(255.99 * pixelColor.y);

@@ -150,6 +150,33 @@ src/Simple-Path-Tracer/Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.s
 .PHONY : src/Simple-Path-Tracer/Camera.cpp.s
 
+src/Simple-Path-Tracer/Diffuse.o: src/Simple-Path-Tracer/Diffuse.cpp.o
+
+.PHONY : src/Simple-Path-Tracer/Diffuse.o
+
+# target to build an object file
+src/Simple-Path-Tracer/Diffuse.cpp.o:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o
+.PHONY : src/Simple-Path-Tracer/Diffuse.cpp.o
+
+src/Simple-Path-Tracer/Diffuse.i: src/Simple-Path-Tracer/Diffuse.cpp.i
+
+.PHONY : src/Simple-Path-Tracer/Diffuse.i
+
+# target to preprocess a source file
+src/Simple-Path-Tracer/Diffuse.cpp.i:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.i
+.PHONY : src/Simple-Path-Tracer/Diffuse.cpp.i
+
+src/Simple-Path-Tracer/Diffuse.s: src/Simple-Path-Tracer/Diffuse.cpp.s
+
+.PHONY : src/Simple-Path-Tracer/Diffuse.s
+
+# target to generate assembly for a file
+src/Simple-Path-Tracer/Diffuse.cpp.s:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.s
+.PHONY : src/Simple-Path-Tracer/Diffuse.cpp.s
+
 src/Simple-Path-Tracer/PathTracer.o: src/Simple-Path-Tracer/PathTracer.cpp.o
 
 .PHONY : src/Simple-Path-Tracer/PathTracer.o
@@ -258,6 +285,33 @@ src/Simple-Path-Tracer/main.cpp.s:
 	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/main.cpp.s
 .PHONY : src/Simple-Path-Tracer/main.cpp.s
 
+src/Simple-Path-Tracer/util.o: src/Simple-Path-Tracer/util.cpp.o
+
+.PHONY : src/Simple-Path-Tracer/util.o
+
+# target to build an object file
+src/Simple-Path-Tracer/util.cpp.o:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o
+.PHONY : src/Simple-Path-Tracer/util.cpp.o
+
+src/Simple-Path-Tracer/util.i: src/Simple-Path-Tracer/util.cpp.i
+
+.PHONY : src/Simple-Path-Tracer/util.i
+
+# target to preprocess a source file
+src/Simple-Path-Tracer/util.cpp.i:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.i
+.PHONY : src/Simple-Path-Tracer/util.cpp.i
+
+src/Simple-Path-Tracer/util.s: src/Simple-Path-Tracer/util.cpp.s
+
+.PHONY : src/Simple-Path-Tracer/util.s
+
+# target to generate assembly for a file
+src/Simple-Path-Tracer/util.cpp.s:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.s
+.PHONY : src/Simple-Path-Tracer/util.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,6 +324,9 @@ help:
 	@echo "... src/Simple-Path-Tracer/Camera.o"
 	@echo "... src/Simple-Path-Tracer/Camera.i"
 	@echo "... src/Simple-Path-Tracer/Camera.s"
+	@echo "... src/Simple-Path-Tracer/Diffuse.o"
+	@echo "... src/Simple-Path-Tracer/Diffuse.i"
+	@echo "... src/Simple-Path-Tracer/Diffuse.s"
 	@echo "... src/Simple-Path-Tracer/PathTracer.o"
 	@echo "... src/Simple-Path-Tracer/PathTracer.i"
 	@echo "... src/Simple-Path-Tracer/PathTracer.s"
@@ -282,6 +339,9 @@ help:
 	@echo "... src/Simple-Path-Tracer/main.o"
 	@echo "... src/Simple-Path-Tracer/main.i"
 	@echo "... src/Simple-Path-Tracer/main.s"
+	@echo "... src/Simple-Path-Tracer/util.o"
+	@echo "... src/Simple-Path-Tracer/util.i"
+	@echo "... src/Simple-Path-Tracer/util.s"
 .PHONY : help
 
 

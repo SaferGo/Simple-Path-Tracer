@@ -22,6 +22,8 @@ add_executable(${PROJECT_NAME}
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Camera.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Ray.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Sphere.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Diffuse.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/util.cpp"
 )
 
 target_include_directories(

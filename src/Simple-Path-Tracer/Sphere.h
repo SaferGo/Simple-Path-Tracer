@@ -3,6 +3,7 @@
 #include <Simple-Path-Tracer/Hitable.h>
 #include <Simple-Path-Tracer/Ray.h>
 #include <Simple-Path-Tracer/HitInfo.h>
+#include <Simple-Path-Tracer/Material.h>
 
 #include <glm/glm.hpp>
 
@@ -10,12 +11,15 @@ class Sphere: public Hitable
 {
 public:
 
-   Sphere();
-   Sphere(const glm::vec3& otherCenter, const float otherRadius);
-   ~Sphere();
-   virtual bool isHitted(
-         const Ray& ray, const float tMin, const float tMax, HitInfo& hitInfo
+   Sphere(
+         const glm::vec3& otherCenter,
+         const float otherRadius,
+         Material* otherMaterial
    );
+   ~Sphere();
+   bool isHitted(
+         const Ray& inRay, const float tMin, const float tMax, HitInfo& hitInfo
+   ) override;
    glm::vec3 getCenter() const;
    float getRadius() const;
 
