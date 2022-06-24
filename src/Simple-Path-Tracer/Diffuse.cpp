@@ -4,7 +4,6 @@
 #include <Simple-Path-Tracer/util.h>
 
 #include <glm/glm.hpp>
-#include <iostream>
 
 Diffuse::Diffuse(const glm::vec3& otherAlbedo)
 { 
@@ -12,12 +11,15 @@ Diffuse::Diffuse(const glm::vec3& otherAlbedo)
 }
 
 Ray Diffuse::getReflectedRay(
-      const glm::vec3& hit, const glm::vec3& normal, bool& isAbsorved
+      const Ray& inRay, 
+      const glm::vec3& hit,
+      const glm::vec3& normal,
+      bool& isAbsorved
 )
 {
    isAbsorved = false;
 
-   return Ray(hit, normal + util::getRandDirection());
+   return Ray(hit, normal + util::getRandUnitCircle());
 }
 
 Diffuse::~Diffuse() {}

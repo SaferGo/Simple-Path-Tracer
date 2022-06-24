@@ -177,6 +177,33 @@ src/Simple-Path-Tracer/Diffuse.cpp.s:
 	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.s
 .PHONY : src/Simple-Path-Tracer/Diffuse.cpp.s
 
+src/Simple-Path-Tracer/Metal.o: src/Simple-Path-Tracer/Metal.cpp.o
+
+.PHONY : src/Simple-Path-Tracer/Metal.o
+
+# target to build an object file
+src/Simple-Path-Tracer/Metal.cpp.o:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o
+.PHONY : src/Simple-Path-Tracer/Metal.cpp.o
+
+src/Simple-Path-Tracer/Metal.i: src/Simple-Path-Tracer/Metal.cpp.i
+
+.PHONY : src/Simple-Path-Tracer/Metal.i
+
+# target to preprocess a source file
+src/Simple-Path-Tracer/Metal.cpp.i:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.i
+.PHONY : src/Simple-Path-Tracer/Metal.cpp.i
+
+src/Simple-Path-Tracer/Metal.s: src/Simple-Path-Tracer/Metal.cpp.s
+
+.PHONY : src/Simple-Path-Tracer/Metal.s
+
+# target to generate assembly for a file
+src/Simple-Path-Tracer/Metal.cpp.s:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.s
+.PHONY : src/Simple-Path-Tracer/Metal.cpp.s
+
 src/Simple-Path-Tracer/PathTracer.o: src/Simple-Path-Tracer/PathTracer.cpp.o
 
 .PHONY : src/Simple-Path-Tracer/PathTracer.o
@@ -327,6 +354,9 @@ help:
 	@echo "... src/Simple-Path-Tracer/Diffuse.o"
 	@echo "... src/Simple-Path-Tracer/Diffuse.i"
 	@echo "... src/Simple-Path-Tracer/Diffuse.s"
+	@echo "... src/Simple-Path-Tracer/Metal.o"
+	@echo "... src/Simple-Path-Tracer/Metal.i"
+	@echo "... src/Simple-Path-Tracer/Metal.s"
 	@echo "... src/Simple-Path-Tracer/PathTracer.o"
 	@echo "... src/Simple-Path-Tracer/PathTracer.i"
 	@echo "... src/Simple-Path-Tracer/PathTracer.s"

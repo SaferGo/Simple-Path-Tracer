@@ -1,7 +1,7 @@
 #include <Simple-Path-Tracer/util.h>
 
 // Gets a random direction from the unit sphere
-glm::vec3 util::getRandDirection()
+glm::vec3 util::getRandUnitCircle()
 {
    glm::vec3 newDirection;
    

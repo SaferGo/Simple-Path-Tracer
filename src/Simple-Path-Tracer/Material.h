@@ -11,7 +11,10 @@ class Material
 public:
 
    virtual Ray getReflectedRay(
-         const glm::vec3& hit, const glm::vec3& normal, bool& isAbsorved
+         const Ray& inRay,
+         const glm::vec3& hit,
+         const glm::vec3& normal,
+         bool& isAbsorved
    ) = 0;
    virtual ~Material() {}
 

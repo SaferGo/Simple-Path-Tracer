@@ -5,18 +5,22 @@
 
 #include <glm/glm.hpp>
 
-class Diffuse : public Material
+class Metal : public Material
 {
 
 public:
 
-   Diffuse(const glm::vec3& otherAlbedo);
-   ~Diffuse() override;
+   Metal(const glm::vec3& otherAlbedo, const float otherFuzz);
+   ~Metal() override;
    Ray getReflectedRay(
          const Ray& inRay,
          const glm::vec3& hit,
          const glm::vec3& normal,
          bool& isAbsorved
    ) override;
+
+private:
+
+   float m_fuzz;
 
 };

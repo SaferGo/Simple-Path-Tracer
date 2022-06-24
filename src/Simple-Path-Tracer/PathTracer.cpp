@@ -7,6 +7,7 @@
 #include <Simple-Path-Tracer/Sphere.h>
 #include <Simple-Path-Tracer/Material.h>
 #include <Simple-Path-Tracer/Diffuse.h>
+#include <Simple-Path-Tracer/Metal.h>
 
 #include <glm/glm.hpp>
 
@@ -70,7 +71,7 @@ glm::vec3 PathTraicer::getColor(
       bool isAbsorved = false;
 
       Ray reflectedRay = material->getReflectedRay(
-            closestHit, normal, isAbsorved
+            ray, closestHit, normal, isAbsorved
       );
 
       if (isAbsorved)
@@ -107,6 +108,21 @@ void PathTraicer::render(std::fstream& img)
             new Diffuse(glm::vec3(0.8, 0.8, 0.0))
          )
    );
+   world.push_back(
+         std::make_unique<Sphere>(
+            glm::vec3(1.0, 0.0, -1.0),
+            0.5,
+            new Metal(glm::vec3(0.8, 0.6, 0.2), 0.3)
+         )
+   );
+   world.push_back(
+         std::make_unique<Sphere>(
+            glm::vec3(-1.0, 0.0, -1.0),
+            0.5,
+            new Metal(glm::vec3(0.8, 0.8, 0.8), 0.1)
+         )
+   );
+
       
    Camera camera(
          glm::vec3(0.0),              // origin

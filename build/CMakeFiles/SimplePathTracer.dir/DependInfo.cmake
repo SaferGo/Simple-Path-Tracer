@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Camera.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Diffuse.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o"
+  "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Metal.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/PathTracer.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Ray.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.o"
   "/home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Sphere.cpp" "/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o"

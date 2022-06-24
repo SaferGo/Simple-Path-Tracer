@@ -10,5 +10,5 @@ namespace util
    inline std::uniform_real_distribution<> rand01(0.0, 1.0);
 
    float getRand01();
-   glm::vec3 getRandDirection();
+   glm::vec3 getRandUnitCircle();
 };
