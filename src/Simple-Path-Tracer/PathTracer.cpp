@@ -119,7 +119,7 @@ void PathTraicer::render(std::fstream& img)
          std::make_unique<Sphere>(
             glm::vec3(-1.0, 0.0, -1.0),
             0.5,
-            new Metal(glm::vec3(0.8, 0.8, 0.8), 0.1)
+            new Metal(glm::vec3(0.8, 0.8, 0.8), 0.0)
          )
    );
 

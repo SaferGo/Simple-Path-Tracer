@@ -11,4 +11,5 @@ namespace util
 
    float getRand01();
    glm::vec3 getRandUnitCircle();
+   glm::vec3 getReflectedVector(glm::vec3 in, glm::vec3 normal);
 };

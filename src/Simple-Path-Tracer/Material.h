@@ -22,6 +22,9 @@ public:
 
 protected:
    
+   // Fraction of light that is reflected by a surface.
+   // 0 -> absorbs all light striking it
+   // 1 -> perfect reflector(mirror)
    glm::vec3 m_albedo;
 
 };

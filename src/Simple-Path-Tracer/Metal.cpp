@@ -22,21 +22,19 @@ Ray Metal::getReflectedRay(
       bool& isAbsorved
 ) {
 
-   glm::vec3 normDirection = glm::normalize(inRay.getDirection());
-   glm::vec3 newDirection  = (
-         normDirection -
-         2 * glm::dot(normDirection, normal) * normal
+   glm::vec3 reflectionDir = util::getReflectedVector(
+         inRay.getDirection(),
+         normal
    );
 
-   newDirection += m_fuzz * util::getRandUnitCircle();
+   reflectionDir += m_fuzz * util::getRandUnitCircle();
 
    Ray reflection(
          hit,
-         newDirection
+         reflectionDir
    );
    
-   isAbsorved = (glm::dot(newDirection ,normal) < 0);
-
+   isAbsorved = (glm::dot(reflectionDir ,normal) < 0);
 
    return reflection;
 }
