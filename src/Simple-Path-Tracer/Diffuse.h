@@ -10,13 +10,12 @@ class Diffuse : public Material
 
 public:
 
-   Diffuse(const glm::vec3& otherAlbedo);
+   Diffuse(const glm::vec3 otherAlbedo);
    ~Diffuse() override;
-   Ray getReflectedRay(
+   Ray scatter(
          const Ray& inRay,
          const glm::vec3& hit,
          const glm::vec3& normal,
          bool& isAbsorved
    ) override;
-
 };

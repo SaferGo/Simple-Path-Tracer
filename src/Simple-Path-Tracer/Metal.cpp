@@ -5,7 +5,7 @@
 
 #include <glm/glm.hpp>
 
-Metal::Metal(const glm::vec3& otherAlbedo, const float otherFuzz)
+Metal::Metal(const glm::vec3 otherAlbedo, const float otherFuzz)
 { 
    m_albedo = otherAlbedo; 
 
@@ -15,14 +15,14 @@ Metal::Metal(const glm::vec3& otherAlbedo, const float otherFuzz)
       m_fuzz = otherFuzz;
 }
 
-Ray Metal::getReflectedRay(
+Ray Metal::scatter(
       const Ray& inRay,
       const glm::vec3& hit,
       const glm::vec3& normal,
       bool& isAbsorved
 ) {
 
-   glm::vec3 reflectionDir = util::getReflectedVector(
+   glm::vec3 reflectionDir = util::getSpecularReflection(
          inRay.getDirection(),
          normal
    );

@@ -10,12 +10,14 @@ class Material
 
 public:
 
-   virtual Ray getReflectedRay(
+   virtual Ray scatter(
          const Ray& inRay,
          const glm::vec3& hit,
          const glm::vec3& normal,
          bool& isAbsorved
    ) = 0;
+
+   
    virtual ~Material() {}
 
    glm::vec3 getAlbedo() const { return m_albedo; }

@@ -8,6 +8,7 @@
 #include <Simple-Path-Tracer/Material.h>
 #include <Simple-Path-Tracer/Diffuse.h>
 #include <Simple-Path-Tracer/Metal.h>
+#include <Simple-Path-Tracer/Dielectric.h>
 
 #include <glm/glm.hpp>
 
@@ -70,7 +71,7 @@ glm::vec3 PathTraicer::getColor(
    {
       bool isAbsorved = false;
 
-      Ray reflectedRay = material->getReflectedRay(
+      Ray reflectedRay = material->scatter(
             ray, closestHit, normal, isAbsorved
       );
 
@@ -84,7 +85,10 @@ glm::vec3 PathTraicer::getColor(
       }
    }
 
-   return glm::vec3(0.9, 0.8, 0.5);
+   // delete
+   glm::vec3 uv = glm::normalize(ray.getDirection());
+   const float t = 0.5 * (uv.y + 1.0);
+   return (1.0f - t) * glm::vec3(1.0) + t * glm::vec3(0.5, 0.7, 1.0);
 }
 
 void PathTraicer::render(std::fstream& img)
@@ -119,7 +123,7 @@ void PathTraicer::render(std::fstream& img)
          std::make_unique<Sphere>(
             glm::vec3(-1.0, 0.0, -1.0),
             0.5,
-            new Metal(glm::vec3(0.8, 0.8, 0.8), 0.0)
+            new Dielectric(1.5)
          )
    );
 

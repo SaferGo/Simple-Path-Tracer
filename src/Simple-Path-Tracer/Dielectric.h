@@ -5,13 +5,13 @@
 
 #include <glm/glm.hpp>
 
-class Metal : public Material
+class Dielectric : public Material
 {
 
 public:
 
-   Metal(const glm::vec3 otherAlbedo, const float otherFuzz);
-   ~Metal() override;
+   Dielectric(const float otherRefractiveIndex);
+   ~Dielectric() override;
 
    Ray scatter(
          const Ray& inRay,
@@ -22,6 +22,6 @@ public:
 
 private:
 
-   float m_fuzz;
+   float m_refractiveIndex;
 
 };

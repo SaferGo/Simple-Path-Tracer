@@ -5,21 +5,20 @@
 
 #include <glm/glm.hpp>
 
-Diffuse::Diffuse(const glm::vec3& otherAlbedo)
+Diffuse::Diffuse(const glm::vec3 otherAlbedo)
 { 
    m_albedo = otherAlbedo; 
 }
 
-Ray Diffuse::getReflectedRay(
+Ray Diffuse::scatter(
       const Ray& inRay, 
       const glm::vec3& hit,
       const glm::vec3& normal,
       bool& isAbsorved
-)
-{
+) {
    isAbsorved = false;
 
-   return Ray(hit, normal + util::getRandUnitCircle());
+   return Ray(hit, util::getDiffuseReflection(normal));
 }
 
 Diffuse::~Diffuse() {}

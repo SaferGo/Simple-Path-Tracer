@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../bin/SimplePathTracer"
   "../bin/SimplePathTracer.pdb"
   "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o"
+  "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o"
   "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o"
   "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o"
   "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.o"

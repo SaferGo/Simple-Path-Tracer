@@ -17,10 +17,16 @@ glm::vec3 util::getRandUnitCircle()
    return newDirection;
 }
 
+float util::getRand01()
+{
+   return rand01(gen);
+}
+
 // In this case the incident vector is pointing to the surface, normally
 // it's pointing toward the light source.
-glm::vec3 util::getReflectedVector(glm::vec3 in, glm::vec3 normal)
-{
+glm::vec3 util::getSpecularReflection(
+      const glm::vec3 in, const glm::vec3 normal
+) {
    glm::vec3 normIn = glm::normalize(in);
 
    return glm::vec3(
@@ -29,7 +35,51 @@ glm::vec3 util::getReflectedVector(glm::vec3 in, glm::vec3 normal)
    );
 }
 
-float util::getRand01()
+glm::vec3 util::getDiffuseReflection(const glm::vec3 normal) {
+   return normal + getRandUnitCircle();
+}
+
+glm::vec3 util::getRefraction(
+         const glm::vec3 in,
+         const glm::vec3 normal,
+         const float ratioIndex,
+         bool& refractionExists
+) {
+
+   const glm::vec3 normIn = glm::normalize(in);
+   const float dt = glm::dot(normIn, normal);
+
+   const float discriminant = 1.0 - ratioIndex * ratioIndex * (1 - dt * dt);
+
+   if (discriminant > 0.0)
+   {
+      refractionExists = true;
+
+      glm::vec3 refractionDir = 
+         ratioIndex * (normIn - normal * dt) - normal * glm::sqrt(discriminant);
+
+      return refractionDir;
+
+   } else
+   {
+      refractionExists = false;
+
+      return glm::vec3(0);
+   }
+
+}
+
+
+float util::schlick(const float cosine, const float refractiveIndex)
 {
-   return rand01(gen);
+   float r0 = (1.0 - refractiveIndex) / (1.0 + refractiveIndex);
+   r0 = r0 * r0;
+
+   return r0 + (1 - r0) * glm::pow((1 - cosine), 5);
+}
+
+
+bool util::isRayEnteringIntoSurface(const Ray& in, glm::vec3 normal)
+{
+   return (glm::dot(in.getDirection(), normal) <= 0.0);
 }

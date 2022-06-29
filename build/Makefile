@@ -150,6 +150,33 @@ src/Simple-Path-Tracer/Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.s
 .PHONY : src/Simple-Path-Tracer/Camera.cpp.s
 
+src/Simple-Path-Tracer/Dielectric.o: src/Simple-Path-Tracer/Dielectric.cpp.o
+
+.PHONY : src/Simple-Path-Tracer/Dielectric.o
+
+# target to build an object file
+src/Simple-Path-Tracer/Dielectric.cpp.o:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o
+.PHONY : src/Simple-Path-Tracer/Dielectric.cpp.o
+
+src/Simple-Path-Tracer/Dielectric.i: src/Simple-Path-Tracer/Dielectric.cpp.i
+
+.PHONY : src/Simple-Path-Tracer/Dielectric.i
+
+# target to preprocess a source file
+src/Simple-Path-Tracer/Dielectric.cpp.i:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.i
+.PHONY : src/Simple-Path-Tracer/Dielectric.cpp.i
+
+src/Simple-Path-Tracer/Dielectric.s: src/Simple-Path-Tracer/Dielectric.cpp.s
+
+.PHONY : src/Simple-Path-Tracer/Dielectric.s
+
+# target to generate assembly for a file
+src/Simple-Path-Tracer/Dielectric.cpp.s:
+	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.s
+.PHONY : src/Simple-Path-Tracer/Dielectric.cpp.s
+
 src/Simple-Path-Tracer/Diffuse.o: src/Simple-Path-Tracer/Diffuse.cpp.o
 
 .PHONY : src/Simple-Path-Tracer/Diffuse.o
@@ -351,6 +378,9 @@ help:
 	@echo "... src/Simple-Path-Tracer/Camera.o"
 	@echo "... src/Simple-Path-Tracer/Camera.i"
 	@echo "... src/Simple-Path-Tracer/Camera.s"
+	@echo "... src/Simple-Path-Tracer/Dielectric.o"
+	@echo "... src/Simple-Path-Tracer/Dielectric.i"
+	@echo "... src/Simple-Path-Tracer/Dielectric.s"
 	@echo "... src/Simple-Path-Tracer/Diffuse.o"
 	@echo "... src/Simple-Path-Tracer/Diffuse.i"
 	@echo "... src/Simple-Path-Tracer/Diffuse.s"
