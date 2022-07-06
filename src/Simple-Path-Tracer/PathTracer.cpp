@@ -42,28 +42,30 @@ glm::vec3 PathTraicer::gammaCorrection(const glm::vec3& pixelColor) const
 
 glm::vec3 PathTraicer::getColor(
       const Ray& ray,
-      std::vector<std::unique_ptr<Hitable>>& world
+      std::vector<std::unique_ptr<Hitable>>& world,
+      const int depth
 ) const {
+
+   if (depth >= config::MAX_DEPTH)
+      return glm::vec3(0.0);
 
    HitInfo hitInfo;
    Material* material;
-   glm::vec3 closestHit(MAX_FLOAT);
+   glm::vec3 closestHit(0.0);
    glm::vec3 normal(0.0);
+   float closestT = MAX_FLOAT;
 
    bool somethingWasHitted = false;
    for (auto& object : world)
    {
-      if (object->isHitted(ray, 0.0, MAX_FLOAT, hitInfo))
+      if (object->isHitted(ray, 0.001, closestT, hitInfo))
       {
-         if (glm::distance(hitInfo.pos , ray.getOrigin()) <
-             glm::distance(closestHit, ray.getOrigin())
-         ) {
-            material     = object->getMaterial();
-            closestHit   = hitInfo.pos;
-            normal       = hitInfo.normal;
+         material     = object->getMaterial();
+         closestHit   = hitInfo.pos;
+         normal       = hitInfo.normal;
+         closestT     = hitInfo.t;
 
-            somethingWasHitted = true;
-         }
+         somethingWasHitted = true;
       }
    }
 
@@ -71,7 +73,7 @@ glm::vec3 PathTraicer::getColor(
    {
       bool isAbsorved = false;
 
-      Ray reflectedRay = material->scatter(
+      Ray outRay = material->scatter(
             ray, closestHit, normal, isAbsorved
       );
 
@@ -81,7 +83,7 @@ glm::vec3 PathTraicer::getColor(
       {
          glm::vec3 attenuation = material->getAlbedo();
 
-         return attenuation * getColor(reflectedRay, world);
+         return attenuation * getColor(outRay, world, depth + 1);
       }
    }
 
@@ -102,7 +104,7 @@ void PathTraicer::render(std::fstream& img)
          std::make_unique<Sphere>(
             glm::vec3(0.0, 0.0, -1.0),
             0.5,
-            new Diffuse(glm::vec3(0.8, 0.3, 0.3))
+            new Diffuse(glm::vec3(0.1, 0.2, 0.5))
          )
    );
    world.push_back(
@@ -116,7 +118,7 @@ void PathTraicer::render(std::fstream& img)
          std::make_unique<Sphere>(
             glm::vec3(1.0, 0.0, -1.0),
             0.5,
-            new Metal(glm::vec3(0.8, 0.6, 0.2), 0.3)
+            new Metal(glm::vec3(0.8, 0.6, 0.2), 0.0)
          )
    );
    world.push_back(
@@ -127,13 +129,21 @@ void PathTraicer::render(std::fstream& img)
          )
    );
 
+   const glm::vec3 lookFrom(0.0, 1.0, 1.5);
+   const glm::vec3 lookAt(0.0, 0.0, -1.0);
       
    Camera camera(
-         glm::vec3(0.0),              // origin
-         glm::vec3(-2.0, -1.0, -1.0), // lowerLeftCorner
-         glm::vec3(4.0, 0.0, 0.0),    // horizontal
-         glm::vec3(0.0, 2.0, 0.0)     // vertical
+         lookFrom,
+         lookAt,
+         glm::vec3(0.0, 1.0, 0.0),
+         40.0f,
+         float(config::RESOLUTION_W) / float(config::RESOLUTION_H),
+         0.01,
+         glm::length(lookFrom - lookAt)
    );
+
+   const float nPixels = config::RESOLUTION_H * config::RESOLUTION_W;
+   float pixelsLeft = nPixels;
 
    for (int i = config::RESOLUTION_H - 1; i >= 0; i--)
    {
@@ -150,7 +160,7 @@ void PathTraicer::render(std::fstream& img)
                float(i + util::getRand01()) / float(config::RESOLUTION_H);
 
             Ray ray = camera.getRay(u, v);
-            pixelColor += getColor(ray, world);
+            pixelColor += getColor(ray, world, 0);
          }
 
          pixelColor /= float(config::N_SAMPLES);
@@ -162,6 +172,9 @@ void PathTraicer::render(std::fstream& img)
          const unsigned int newB = int(255.99 * pixelColor.z);
 
          img << newR << " " << newG << " " <<newB << "\n";
+
+         pixelsLeft -= 1;
+         std::cout << (nPixels - pixelsLeft) * 100 / nPixels << "%\n";
       }
    }
 }

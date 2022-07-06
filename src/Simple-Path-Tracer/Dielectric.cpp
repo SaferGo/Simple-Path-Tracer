@@ -36,7 +36,7 @@ Ray Dielectric::scatter(
       outwardNormal = normal;
       indexRatio = 1.0 / m_refractiveIndex;
       cosine = -glm::dot(glm::normalize(inRay.getDirection()), normal);
-
+      
    } else
    {
       outwardNormal = -normal;

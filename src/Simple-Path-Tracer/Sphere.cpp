@@ -11,7 +11,6 @@ Sphere::Sphere(
       Material* otherMaterial
 ) : m_center(otherCenter), m_radius(otherRadius)
 { 
-   // Protected member of base class "Surface"
    m_material = otherMaterial;
 }
 
@@ -36,22 +35,21 @@ bool Sphere::isHitted(
 
    float discriminant = b * b - a * c;
 
-   if (discriminant > 0.0f)
+   if (discriminant > 0)
    {
       // FIX/IMPROVE THIS
 
-      // We return the 't' that is closer to the camera. There is no point
-      // in returning the one that is behind the closest hit(in the case where
-      // there are 2 hits).
+      // We return the 't' that is closer to the ray. There is no point in
+      // returning the one that is further away/behind.
       float t1 = (-b - glm::sqrt(discriminant)) / a;
       float t2 = (-b + glm::sqrt(discriminant)) / a;
 
-      if (t1 < t2 && t1 > tMin && t1 < tMax)
+      if (t1 > tMin && t1 < tMax)
       {
          hitInfo.t   = t1;
          hitInfo.pos = inRay.getPointAtParameter(t1);
       }
-      else if (t2 < t1 && t2 > tMin && t2 < tMax)
+      else if (t2 > tMin && t2 < tMax)
       {
          hitInfo.t   = t2;
          hitInfo.pos = inRay.getPointAtParameter(t2);

@@ -2,16 +2,20 @@
 
 #include <Simple-Path-Tracer/Ray.h>
 
+#include <glm/glm.hpp>
+
 class Camera
 {
 public:
 
-   Camera();
    Camera(
-         const glm::vec3& otherOrigin,
-         const glm::vec3& otherLowerLeftCorner,
-         const glm::vec3& otherHorizontal,
-         const glm::vec3& otherVertical
+         const glm::vec3 lookFrom,
+         const glm::vec3 lookAt,
+         const glm::vec3 vup,
+         const float vfov,
+         const float aspect,
+         const float aperture,
+         const float focusDist
    );
    ~Camera();
 
@@ -19,6 +23,7 @@ public:
    glm::vec3 getLowerLeftCorner() const;
    glm::vec3 getHorizontal() const;
    glm::vec3 getVertical() const;
+   float getLensRadius() const;
    Ray getRay(const float u, const float v) const;
 
 private:
@@ -27,4 +32,6 @@ private:
    glm::vec3 m_lowerLeftCorner;
    glm::vec3 m_horizontal;
    glm::vec3 m_vertical;
+   glm::vec3 m_u, m_v, m_w;
+   float     m_lensRadius;
 };

@@ -23,7 +23,9 @@ private:
 
    void render(std::fstream& img);
    glm::vec3 getColor(
-         const Ray& ray, std::vector<std::unique_ptr<Hitable>>& world
+         const Ray& ray,
+         std::vector<std::unique_ptr<Hitable>>& world,
+         const int depth
    ) const;
    glm::vec3 gammaCorrection(const glm::vec3& pixelColor) const;
 };

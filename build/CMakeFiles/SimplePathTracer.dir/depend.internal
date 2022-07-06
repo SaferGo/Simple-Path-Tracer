@@ -94,6 +94,8 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o
  ../libs/glm/glm/ext/matrix_float4x3_precision.hpp
  ../libs/glm/glm/ext/matrix_float4x4.hpp
  ../libs/glm/glm/ext/matrix_float4x4_precision.hpp
+ ../libs/glm/glm/ext/scalar_constants.hpp
+ ../libs/glm/glm/ext/scalar_constants.inl
  ../libs/glm/glm/ext/scalar_int_sized.hpp
  ../libs/glm/glm/ext/scalar_uint_sized.hpp
  ../libs/glm/glm/ext/vector_bool2.hpp
@@ -129,6 +131,8 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o
  ../libs/glm/glm/fwd.hpp
  ../libs/glm/glm/geometric.hpp
  ../libs/glm/glm/glm.hpp
+ ../libs/glm/glm/gtc/constants.hpp
+ ../libs/glm/glm/gtc/constants.inl
  ../libs/glm/glm/integer.hpp
  ../libs/glm/glm/mat2x2.hpp
  ../libs/glm/glm/mat2x3.hpp
@@ -155,6 +159,7 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o
  ../libs/glm/glm/vector_relational.hpp
  ../src/Simple-Path-Tracer/Camera.h
  ../src/Simple-Path-Tracer/Ray.h
+ ../src/Simple-Path-Tracer/util.h
  /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Camera.cpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o
  ../libs/glm/glm/common.hpp

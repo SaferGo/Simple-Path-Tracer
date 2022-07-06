@@ -93,6 +93,8 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/matrix_float4x3_precision.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/matrix_float4x4.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/matrix_float4x4_precision.hpp
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/scalar_constants.hpp
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/scalar_constants.inl
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/scalar_int_sized.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/scalar_uint_sized.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/ext/vector_bool2.hpp
@@ -128,6 +130,8 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/fwd.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/geometric.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/glm.hpp
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/gtc/constants.hpp
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/gtc/constants.inl
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/integer.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/mat2x2.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/mat2x3.hpp
@@ -154,6 +158,7 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../libs/glm/glm/vector_relational.hpp
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../src/Simple-Path-Tracer/Camera.h
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../src/Simple-Path-Tracer/Ray.h
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../src/Simple-Path-Tracer/util.h
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o: ../src/Simple-Path-Tracer/Camera.cpp
 
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o: ../libs/glm/glm/common.hpp

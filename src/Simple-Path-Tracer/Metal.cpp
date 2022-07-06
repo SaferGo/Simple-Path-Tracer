@@ -23,20 +23,15 @@ Ray Metal::scatter(
 ) {
 
    glm::vec3 reflectionDir = util::getSpecularReflection(
-         inRay.getDirection(),
+         glm::normalize(inRay.getDirection()),
          normal
    );
 
    reflectionDir += m_fuzz * util::getRandUnitCircle();
 
-   Ray reflection(
-         hit,
-         reflectionDir
-   );
-   
    isAbsorved = (glm::dot(reflectionDir ,normal) < 0);
 
-   return reflection;
+   return Ray(hit, reflectionDir);
 }
 
 Metal::~Metal() {}

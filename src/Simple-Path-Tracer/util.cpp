@@ -8,10 +8,11 @@ glm::vec3 util::getRandUnitCircle()
    do
    {
       newDirection = glm::vec3(
-            (util::getRand01() * 2.0) - 1.0,
-            (util::getRand01() * 2.0) - 1.0,
-            (util::getRand01() * 2.0) - 1.0
-      );
+            util::getRand01(),
+            util::getRand01(),
+            util::getRand01()
+      ) * 2.0f - glm::vec3(1.0);
+
    } while(glm::dot(newDirection, newDirection) >= 1.0);
 
    return newDirection;
@@ -27,11 +28,10 @@ float util::getRand01()
 glm::vec3 util::getSpecularReflection(
       const glm::vec3 in, const glm::vec3 normal
 ) {
-   glm::vec3 normIn = glm::normalize(in);
-
+   // MM no se si el normalize va
    return glm::vec3(
-         normIn -
-         2 * glm::dot(normIn, normal) * normal
+         in -
+         2 * glm::dot(in, normal) * normal
    );
 }
 
@@ -75,11 +75,11 @@ float util::schlick(const float cosine, const float refractiveIndex)
    float r0 = (1.0 - refractiveIndex) / (1.0 + refractiveIndex);
    r0 = r0 * r0;
 
-   return r0 + (1 - r0) * glm::pow((1 - cosine), 5);
+   return r0 + (1.0 - r0) * glm::pow((1.0 - cosine), 5);
 }
 
 
 bool util::isRayEnteringIntoSurface(const Ray& in, glm::vec3 normal)
 {
-   return (glm::dot(in.getDirection(), normal) <= 0.0);
+   return !(glm::dot(in.getDirection(), normal) > 0.0);
 }
