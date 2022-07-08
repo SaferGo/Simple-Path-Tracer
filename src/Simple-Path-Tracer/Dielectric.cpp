@@ -30,7 +30,7 @@ Ray Dielectric::scatter(
    float cosine;
 
    // Step #1:
-   // Here we deal with the ray enter/exit surface
+   // Here we deal with the ray entering/exiting the surface
    if (util::isRayEnteringIntoSurface(inRay, normal))
    {
       outwardNormal = normal;

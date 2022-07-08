@@ -9,6 +9,6 @@ namespace config
 
    // Antialiasing
    inline constexpr int N_SAMPLES    = 100;
-   
-   inline constexpr int MAX_DEPTH    = 10;
+
+   inline constexpr int MAX_DEPTH    = 20;
 };

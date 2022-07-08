@@ -129,16 +129,16 @@ void PathTraicer::render(std::fstream& img)
          )
    );
 
-   const glm::vec3 lookFrom(0.0, 1.0, 1.5);
+   const glm::vec3 lookFrom(3.0, 3.0, 2.0);
    const glm::vec3 lookAt(0.0, 0.0, -1.0);
       
    Camera camera(
          lookFrom,
          lookAt,
          glm::vec3(0.0, 1.0, 0.0),
-         40.0f,
+         20.0f,
          float(config::RESOLUTION_W) / float(config::RESOLUTION_H),
-         0.01,
+         2.00,
          glm::length(lookFrom - lookAt)
    );
 

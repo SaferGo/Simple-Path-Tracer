@@ -28,7 +28,6 @@ float util::getRand01()
 glm::vec3 util::getSpecularReflection(
       const glm::vec3 in, const glm::vec3 normal
 ) {
-   // MM no se si el normalize va
    return glm::vec3(
          in -
          2 * glm::dot(in, normal) * normal
