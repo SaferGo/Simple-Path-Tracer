@@ -44,16 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/santiago/code/graphics/Simple-Path-Tracer
+CMAKE_SOURCE_DIR = /home/santiago/code/graphics/Simple-Ray-Tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/santiago/code/graphics/Simple-Path-Tracer/build
+CMAKE_BINARY_DIR = /home/santiago/code/graphics/Simple-Ray-Tracer/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SimplePathTracer.dir/all
+all: CMakeFiles/SimpleRayTracer.dir/all
 
 .PHONY : all
 
@@ -63,7 +63,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SimplePathTracer.dir/clean
+clean: CMakeFiles/SimpleRayTracer.dir/clean
 clean: libs/glm/clean
 
 .PHONY : clean
@@ -105,31 +105,31 @@ libs/glm/glm/clean:
 .PHONY : libs/glm/glm/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SimplePathTracer.dir
+# Target rules for target CMakeFiles/SimpleRayTracer.dir
 
 # All Build rule for target.
-CMakeFiles/SimplePathTracer.dir/all:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/depend
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target SimplePathTracer"
-.PHONY : CMakeFiles/SimplePathTracer.dir/all
+CMakeFiles/SimpleRayTracer.dir/all:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/depend
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/santiago/code/graphics/Simple-Ray-Tracer/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target SimpleRayTracer"
+.PHONY : CMakeFiles/SimpleRayTracer.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SimplePathTracer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SimplePathTracer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles 0
-.PHONY : CMakeFiles/SimplePathTracer.dir/rule
+CMakeFiles/SimpleRayTracer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Ray-Tracer/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SimpleRayTracer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Ray-Tracer/build/CMakeFiles 0
+.PHONY : CMakeFiles/SimpleRayTracer.dir/rule
 
 # Convenience name for target.
-SimplePathTracer: CMakeFiles/SimplePathTracer.dir/rule
+SimpleRayTracer: CMakeFiles/SimpleRayTracer.dir/rule
 
-.PHONY : SimplePathTracer
+.PHONY : SimpleRayTracer
 
 # clean rule for target.
-CMakeFiles/SimplePathTracer.dir/clean:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/clean
-.PHONY : CMakeFiles/SimplePathTracer.dir/clean
+CMakeFiles/SimpleRayTracer.dir/clean:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/clean
+.PHONY : CMakeFiles/SimpleRayTracer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

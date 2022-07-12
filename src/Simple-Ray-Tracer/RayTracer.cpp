@@ -1,13 +1,13 @@
-#include <Simple-Path-Tracer/PathTracer.h>
+#include <Simple-Ray-Tracer/RayTracer.h>
 
-#include <Simple-Path-Tracer/config.h>
-#include <Simple-Path-Tracer/util.h>
-#include <Simple-Path-Tracer/Camera.h>
-#include <Simple-Path-Tracer/Ray.h>
-#include <Simple-Path-Tracer/Surfaces/Sphere.h>
-#include <Simple-Path-Tracer/Materials/Diffuse.h>
-#include <Simple-Path-Tracer/Materials/Metal.h>
-#include <Simple-Path-Tracer/Materials/Dielectric.h>
+#include <Simple-Ray-Tracer/config.h>
+#include <Simple-Ray-Tracer/util.h>
+#include <Simple-Ray-Tracer/Camera.h>
+#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/Surfaces/Sphere.h>
+#include <Simple-Ray-Tracer/Materials/Diffuse.h>
+#include <Simple-Ray-Tracer/Materials/Metal.h>
+#include <Simple-Ray-Tracer/Materials/Dielectric.h>
 
 #include <glm/glm.hpp>
 
@@ -16,13 +16,13 @@
 #include <memory>
 
 
-PathTraicer::PathTraicer()
+RayTracer::RayTracer()
 {
    initCamera();
    initWorld();
 }
 
-void PathTraicer::initCamera()
+void RayTracer::initCamera()
 {
    camera = Camera(
          config::camera::LOOK_FROM,
@@ -38,14 +38,14 @@ void PathTraicer::initCamera()
       );
 }
 
-void PathTraicer::initWorld()
+void RayTracer::initWorld()
 {
    // Floor
    world.push_back(
          std::make_unique<Sphere>(
             glm::vec3(0.0, -100.5, -1.0),
             100.0,
-            new Diffuse(glm::vec3(0.8, 0.8, 0.0))
+            new Metal(glm::vec3(0.3, 0.6, 0.2), 0.42)
          )
    );
 
@@ -59,14 +59,14 @@ void PathTraicer::initWorld()
       
    world.push_back(
          std::make_unique<Sphere>(
-            glm::vec3(1.0, 0.0, -1.0),
+            glm::vec3(1.3, 0.0, -1.0),
             0.5,
             new Metal(glm::vec3(0.8, 0.6, 0.2), 0.0)
          )
    );
    world.push_back(
          std::make_unique<Sphere>(
-            glm::vec3(-1.0, 0.0, -1.0),
+            glm::vec3(-1.2, 0.0, -1.0),
             0.5,
             new Dielectric(1.5)
          )
@@ -74,7 +74,7 @@ void PathTraicer::initWorld()
 
 }
 
-void PathTraicer::run()
+void RayTracer::run()
 {
    std::fstream outputImg;
 
@@ -88,12 +88,12 @@ void PathTraicer::run()
    }
 }
 
-glm::vec3 PathTraicer::gammaCorrection(const glm::vec3& pixelColor) const
+glm::vec3 RayTracer::gammaCorrection(const glm::vec3& pixelColor) const
 {
    return glm::sqrt(pixelColor);
 }
 
-glm::vec3 PathTraicer::getColor(const Ray& ray, const int depth) const
+glm::vec3 RayTracer::getColor(const Ray& ray, const int depth) const
 {
    if (depth >= config::MAX_DEPTH)
       return glm::vec3(0.0);
@@ -142,7 +142,7 @@ glm::vec3 PathTraicer::getColor(const Ray& ray, const int depth) const
    return (1.0f - t) * glm::vec3(1.0) + t * glm::vec3(0.5, 0.7, 1.0);
 }
 
-glm::vec3 PathTraicer::MSAA(const int x, const int y) const
+glm::vec3 RayTracer::MSAA(const int x, const int y) const
 {
    glm::vec3 pixelColor(0.0);
    for (int p = 0; p < config::N_SAMPLES; p++)
@@ -160,7 +160,7 @@ glm::vec3 PathTraicer::MSAA(const int x, const int y) const
 
 }
 
-void PathTraicer::render(std::fstream& img)
+void RayTracer::render(std::fstream& img)
 {
    img << "P3\n";
    img << config::RESOLUTION_W << " " << config::RESOLUTION_H << "\n";
@@ -190,4 +190,4 @@ void PathTraicer::render(std::fstream& img)
    }
 }
 
-PathTraicer::~PathTraicer() = default;
+RayTracer::~RayTracer() = default;

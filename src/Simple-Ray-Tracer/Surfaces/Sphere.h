@@ -1,9 +1,9 @@
 #pragma once
 
-#include <Simple-Path-Tracer/Surface.h>
-#include <Simple-Path-Tracer/Ray.h>
-#include <Simple-Path-Tracer/HitInfo.h>
-#include <Simple-Path-Tracer/Material.h>
+#include <Simple-Ray-Tracer/Surface.h>
+#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/HitInfo.h>
+#include <Simple-Ray-Tracer/Material.h>
 
 #include <glm/glm.hpp>
 

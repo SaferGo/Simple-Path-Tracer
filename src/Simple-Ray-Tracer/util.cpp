@@ -1,4 +1,4 @@
-#include <Simple-Path-Tracer/util.h>
+#include <Simple-Ray-Tracer/util.h>
 
 // Gets a random direction from the unit sphere
 glm::vec3 util::getRandUnitCircle()

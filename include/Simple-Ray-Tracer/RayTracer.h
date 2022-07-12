@@ -1,20 +1,20 @@
 #pragma once
 
-#include <Simple-Path-Tracer/Ray.h>
-#include <Simple-Path-Tracer/Camera.h>
-#include <Simple-Path-Tracer/HitInfo.h>
-#include <Simple-Path-Tracer/Surfaces/Sphere.h>
+#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/Camera.h>
+#include <Simple-Ray-Tracer/HitInfo.h>
+#include <Simple-Ray-Tracer/Surfaces/Sphere.h>
 
 #include <memory>
 #include <fstream>
 #include <vector>
 
-class PathTraicer
+class RayTracer
 {
 public:
 
-   PathTraicer();
-   ~PathTraicer();
+   RayTracer();
+   ~RayTracer();
 
    void run();
 

@@ -1,7 +1,7 @@
-#include <Simple-Path-Tracer/Surfaces/Sphere.h>
+#include <Simple-Ray-Tracer/Surfaces/Sphere.h>
 
-#include <Simple-Path-Tracer/HitInfo.h>
-#include <Simple-Path-Tracer/Material.h>
+#include <Simple-Ray-Tracer/HitInfo.h>
+#include <Simple-Ray-Tracer/Material.h>
 
 #include <glm/glm.hpp>
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.9.1)
 
-project(SimplePathTracer)
+project(SimpleRayTracer)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,15 +17,15 @@ add_subdirectory(${GLM_DIR} EXCLUDE_FROM_ALL)
 
 # Executable
 add_executable(${PROJECT_NAME} 
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/main.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/PathTracer.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Camera.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Ray.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/util.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Surfaces/Sphere.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Materials/Diffuse.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Materials/Dielectric.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Materials/Metal.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/main.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/RayTracer.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Camera.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Ray.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/util.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Surfaces/Sphere.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Materials/Diffuse.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Materials/Dielectric.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Materials/Metal.cpp"
 )
 
 target_include_directories(

@@ -17,7 +17,7 @@ namespace config
 
    namespace camera
    {
-      inline constexpr glm::vec3 LOOK_FROM(-1.5, 0.5, 3.0);
+      inline constexpr glm::vec3 LOOK_FROM(-1.5, 2.0, 3.0);
       inline constexpr glm::vec3 LOOK_AT(0.0, 0.0, -1.0);
       inline constexpr glm::vec3 VUP(0.0, 1.0, 0.0);
       inline constexpr float ASPECT = float(RESOLUTION_W) / float(RESOLUTION_H);

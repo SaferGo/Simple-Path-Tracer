@@ -1,4 +1,4 @@
-#include <Simple-Path-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/Ray.h>
 
 Ray::Ray() {}
 

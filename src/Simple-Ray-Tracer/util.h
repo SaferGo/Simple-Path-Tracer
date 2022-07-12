@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Simple-Path-Tracer/Ray.h>
-#include <Simple-Path-Tracer/Camera.h>
+#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/Camera.h>
 
 #include <glm/glm.hpp>
 

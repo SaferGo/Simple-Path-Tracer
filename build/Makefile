@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/santiago/code/graphics/Simple-Path-Tracer
+CMAKE_SOURCE_DIR = /home/santiago/code/graphics/Simple-Ray-Tracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/santiago/code/graphics/Simple-Path-Tracer/build
+CMAKE_BINARY_DIR = /home/santiago/code/graphics/Simple-Ray-Tracer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles /home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Ray-Tracer/build/CMakeFiles /home/santiago/code/graphics/Simple-Ray-Tracer/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/santiago/code/graphics/Simple-Ray-Tracer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,260 +111,260 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SimplePathTracer
+# Target rules for targets named SimpleRayTracer
 
 # Build rule for target.
-SimplePathTracer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SimplePathTracer
-.PHONY : SimplePathTracer
+SimpleRayTracer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SimpleRayTracer
+.PHONY : SimpleRayTracer
 
 # fast build rule for target.
-SimplePathTracer/fast:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/build
-.PHONY : SimplePathTracer/fast
+SimpleRayTracer/fast:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/build
+.PHONY : SimpleRayTracer/fast
 
-src/Simple-Path-Tracer/Camera.o: src/Simple-Path-Tracer/Camera.cpp.o
+src/Simple-Ray-Tracer/Camera.o: src/Simple-Ray-Tracer/Camera.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/Camera.o
-
-# target to build an object file
-src/Simple-Path-Tracer/Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o
-.PHONY : src/Simple-Path-Tracer/Camera.cpp.o
-
-src/Simple-Path-Tracer/Camera.i: src/Simple-Path-Tracer/Camera.cpp.i
-
-.PHONY : src/Simple-Path-Tracer/Camera.i
-
-# target to preprocess a source file
-src/Simple-Path-Tracer/Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.i
-.PHONY : src/Simple-Path-Tracer/Camera.cpp.i
-
-src/Simple-Path-Tracer/Camera.s: src/Simple-Path-Tracer/Camera.cpp.s
-
-.PHONY : src/Simple-Path-Tracer/Camera.s
-
-# target to generate assembly for a file
-src/Simple-Path-Tracer/Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.s
-.PHONY : src/Simple-Path-Tracer/Camera.cpp.s
-
-src/Simple-Path-Tracer/Materials/Dielectric.o: src/Simple-Path-Tracer/Materials/Dielectric.cpp.o
-
-.PHONY : src/Simple-Path-Tracer/Materials/Dielectric.o
+.PHONY : src/Simple-Ray-Tracer/Camera.o
 
 # target to build an object file
-src/Simple-Path-Tracer/Materials/Dielectric.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o
-.PHONY : src/Simple-Path-Tracer/Materials/Dielectric.cpp.o
+src/Simple-Ray-Tracer/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Camera.cpp.o
+.PHONY : src/Simple-Ray-Tracer/Camera.cpp.o
 
-src/Simple-Path-Tracer/Materials/Dielectric.i: src/Simple-Path-Tracer/Materials/Dielectric.cpp.i
+src/Simple-Ray-Tracer/Camera.i: src/Simple-Ray-Tracer/Camera.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/Materials/Dielectric.i
+.PHONY : src/Simple-Ray-Tracer/Camera.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/Materials/Dielectric.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.i
-.PHONY : src/Simple-Path-Tracer/Materials/Dielectric.cpp.i
+src/Simple-Ray-Tracer/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Camera.cpp.i
+.PHONY : src/Simple-Ray-Tracer/Camera.cpp.i
 
-src/Simple-Path-Tracer/Materials/Dielectric.s: src/Simple-Path-Tracer/Materials/Dielectric.cpp.s
+src/Simple-Ray-Tracer/Camera.s: src/Simple-Ray-Tracer/Camera.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/Materials/Dielectric.s
+.PHONY : src/Simple-Ray-Tracer/Camera.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/Materials/Dielectric.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.s
-.PHONY : src/Simple-Path-Tracer/Materials/Dielectric.cpp.s
+src/Simple-Ray-Tracer/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Camera.cpp.s
+.PHONY : src/Simple-Ray-Tracer/Camera.cpp.s
 
-src/Simple-Path-Tracer/Materials/Diffuse.o: src/Simple-Path-Tracer/Materials/Diffuse.cpp.o
+src/Simple-Ray-Tracer/Materials/Dielectric.o: src/Simple-Ray-Tracer/Materials/Dielectric.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/Materials/Diffuse.o
+.PHONY : src/Simple-Ray-Tracer/Materials/Dielectric.o
 
 # target to build an object file
-src/Simple-Path-Tracer/Materials/Diffuse.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o
-.PHONY : src/Simple-Path-Tracer/Materials/Diffuse.cpp.o
+src/Simple-Ray-Tracer/Materials/Dielectric.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Dielectric.cpp.o
+.PHONY : src/Simple-Ray-Tracer/Materials/Dielectric.cpp.o
 
-src/Simple-Path-Tracer/Materials/Diffuse.i: src/Simple-Path-Tracer/Materials/Diffuse.cpp.i
+src/Simple-Ray-Tracer/Materials/Dielectric.i: src/Simple-Ray-Tracer/Materials/Dielectric.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/Materials/Diffuse.i
+.PHONY : src/Simple-Ray-Tracer/Materials/Dielectric.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/Materials/Diffuse.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.i
-.PHONY : src/Simple-Path-Tracer/Materials/Diffuse.cpp.i
+src/Simple-Ray-Tracer/Materials/Dielectric.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Dielectric.cpp.i
+.PHONY : src/Simple-Ray-Tracer/Materials/Dielectric.cpp.i
 
-src/Simple-Path-Tracer/Materials/Diffuse.s: src/Simple-Path-Tracer/Materials/Diffuse.cpp.s
+src/Simple-Ray-Tracer/Materials/Dielectric.s: src/Simple-Ray-Tracer/Materials/Dielectric.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/Materials/Diffuse.s
+.PHONY : src/Simple-Ray-Tracer/Materials/Dielectric.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/Materials/Diffuse.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.s
-.PHONY : src/Simple-Path-Tracer/Materials/Diffuse.cpp.s
+src/Simple-Ray-Tracer/Materials/Dielectric.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Dielectric.cpp.s
+.PHONY : src/Simple-Ray-Tracer/Materials/Dielectric.cpp.s
 
-src/Simple-Path-Tracer/Materials/Metal.o: src/Simple-Path-Tracer/Materials/Metal.cpp.o
+src/Simple-Ray-Tracer/Materials/Diffuse.o: src/Simple-Ray-Tracer/Materials/Diffuse.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/Materials/Metal.o
+.PHONY : src/Simple-Ray-Tracer/Materials/Diffuse.o
 
 # target to build an object file
-src/Simple-Path-Tracer/Materials/Metal.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o
-.PHONY : src/Simple-Path-Tracer/Materials/Metal.cpp.o
+src/Simple-Ray-Tracer/Materials/Diffuse.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Diffuse.cpp.o
+.PHONY : src/Simple-Ray-Tracer/Materials/Diffuse.cpp.o
 
-src/Simple-Path-Tracer/Materials/Metal.i: src/Simple-Path-Tracer/Materials/Metal.cpp.i
+src/Simple-Ray-Tracer/Materials/Diffuse.i: src/Simple-Ray-Tracer/Materials/Diffuse.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/Materials/Metal.i
+.PHONY : src/Simple-Ray-Tracer/Materials/Diffuse.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/Materials/Metal.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.i
-.PHONY : src/Simple-Path-Tracer/Materials/Metal.cpp.i
+src/Simple-Ray-Tracer/Materials/Diffuse.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Diffuse.cpp.i
+.PHONY : src/Simple-Ray-Tracer/Materials/Diffuse.cpp.i
 
-src/Simple-Path-Tracer/Materials/Metal.s: src/Simple-Path-Tracer/Materials/Metal.cpp.s
+src/Simple-Ray-Tracer/Materials/Diffuse.s: src/Simple-Ray-Tracer/Materials/Diffuse.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/Materials/Metal.s
+.PHONY : src/Simple-Ray-Tracer/Materials/Diffuse.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/Materials/Metal.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.s
-.PHONY : src/Simple-Path-Tracer/Materials/Metal.cpp.s
+src/Simple-Ray-Tracer/Materials/Diffuse.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Diffuse.cpp.s
+.PHONY : src/Simple-Ray-Tracer/Materials/Diffuse.cpp.s
 
-src/Simple-Path-Tracer/PathTracer.o: src/Simple-Path-Tracer/PathTracer.cpp.o
+src/Simple-Ray-Tracer/Materials/Metal.o: src/Simple-Ray-Tracer/Materials/Metal.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/PathTracer.o
+.PHONY : src/Simple-Ray-Tracer/Materials/Metal.o
 
 # target to build an object file
-src/Simple-Path-Tracer/PathTracer.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.o
-.PHONY : src/Simple-Path-Tracer/PathTracer.cpp.o
+src/Simple-Ray-Tracer/Materials/Metal.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Metal.cpp.o
+.PHONY : src/Simple-Ray-Tracer/Materials/Metal.cpp.o
 
-src/Simple-Path-Tracer/PathTracer.i: src/Simple-Path-Tracer/PathTracer.cpp.i
+src/Simple-Ray-Tracer/Materials/Metal.i: src/Simple-Ray-Tracer/Materials/Metal.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/PathTracer.i
+.PHONY : src/Simple-Ray-Tracer/Materials/Metal.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/PathTracer.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.i
-.PHONY : src/Simple-Path-Tracer/PathTracer.cpp.i
+src/Simple-Ray-Tracer/Materials/Metal.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Metal.cpp.i
+.PHONY : src/Simple-Ray-Tracer/Materials/Metal.cpp.i
 
-src/Simple-Path-Tracer/PathTracer.s: src/Simple-Path-Tracer/PathTracer.cpp.s
+src/Simple-Ray-Tracer/Materials/Metal.s: src/Simple-Ray-Tracer/Materials/Metal.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/PathTracer.s
+.PHONY : src/Simple-Ray-Tracer/Materials/Metal.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/PathTracer.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.s
-.PHONY : src/Simple-Path-Tracer/PathTracer.cpp.s
+src/Simple-Ray-Tracer/Materials/Metal.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Materials/Metal.cpp.s
+.PHONY : src/Simple-Ray-Tracer/Materials/Metal.cpp.s
 
-src/Simple-Path-Tracer/Ray.o: src/Simple-Path-Tracer/Ray.cpp.o
+src/Simple-Ray-Tracer/Ray.o: src/Simple-Ray-Tracer/Ray.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/Ray.o
+.PHONY : src/Simple-Ray-Tracer/Ray.o
 
 # target to build an object file
-src/Simple-Path-Tracer/Ray.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.o
-.PHONY : src/Simple-Path-Tracer/Ray.cpp.o
+src/Simple-Ray-Tracer/Ray.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Ray.cpp.o
+.PHONY : src/Simple-Ray-Tracer/Ray.cpp.o
 
-src/Simple-Path-Tracer/Ray.i: src/Simple-Path-Tracer/Ray.cpp.i
+src/Simple-Ray-Tracer/Ray.i: src/Simple-Ray-Tracer/Ray.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/Ray.i
+.PHONY : src/Simple-Ray-Tracer/Ray.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/Ray.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.i
-.PHONY : src/Simple-Path-Tracer/Ray.cpp.i
+src/Simple-Ray-Tracer/Ray.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Ray.cpp.i
+.PHONY : src/Simple-Ray-Tracer/Ray.cpp.i
 
-src/Simple-Path-Tracer/Ray.s: src/Simple-Path-Tracer/Ray.cpp.s
+src/Simple-Ray-Tracer/Ray.s: src/Simple-Ray-Tracer/Ray.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/Ray.s
+.PHONY : src/Simple-Ray-Tracer/Ray.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/Ray.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.s
-.PHONY : src/Simple-Path-Tracer/Ray.cpp.s
+src/Simple-Ray-Tracer/Ray.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Ray.cpp.s
+.PHONY : src/Simple-Ray-Tracer/Ray.cpp.s
 
-src/Simple-Path-Tracer/Surfaces/Sphere.o: src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o
+src/Simple-Ray-Tracer/RayTracer.o: src/Simple-Ray-Tracer/RayTracer.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/Surfaces/Sphere.o
+.PHONY : src/Simple-Ray-Tracer/RayTracer.o
 
 # target to build an object file
-src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o
-.PHONY : src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o
+src/Simple-Ray-Tracer/RayTracer.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/RayTracer.cpp.o
+.PHONY : src/Simple-Ray-Tracer/RayTracer.cpp.o
 
-src/Simple-Path-Tracer/Surfaces/Sphere.i: src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i
+src/Simple-Ray-Tracer/RayTracer.i: src/Simple-Ray-Tracer/RayTracer.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/Surfaces/Sphere.i
+.PHONY : src/Simple-Ray-Tracer/RayTracer.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i
-.PHONY : src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i
+src/Simple-Ray-Tracer/RayTracer.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/RayTracer.cpp.i
+.PHONY : src/Simple-Ray-Tracer/RayTracer.cpp.i
 
-src/Simple-Path-Tracer/Surfaces/Sphere.s: src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s
+src/Simple-Ray-Tracer/RayTracer.s: src/Simple-Ray-Tracer/RayTracer.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/Surfaces/Sphere.s
+.PHONY : src/Simple-Ray-Tracer/RayTracer.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s
-.PHONY : src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s
+src/Simple-Ray-Tracer/RayTracer.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/RayTracer.cpp.s
+.PHONY : src/Simple-Ray-Tracer/RayTracer.cpp.s
 
-src/Simple-Path-Tracer/main.o: src/Simple-Path-Tracer/main.cpp.o
+src/Simple-Ray-Tracer/Surfaces/Sphere.o: src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/main.o
+.PHONY : src/Simple-Ray-Tracer/Surfaces/Sphere.o
 
 # target to build an object file
-src/Simple-Path-Tracer/main.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/main.cpp.o
-.PHONY : src/Simple-Path-Tracer/main.cpp.o
+src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.o
+.PHONY : src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.o
 
-src/Simple-Path-Tracer/main.i: src/Simple-Path-Tracer/main.cpp.i
+src/Simple-Ray-Tracer/Surfaces/Sphere.i: src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/main.i
+.PHONY : src/Simple-Ray-Tracer/Surfaces/Sphere.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/main.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/main.cpp.i
-.PHONY : src/Simple-Path-Tracer/main.cpp.i
+src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.i
+.PHONY : src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.i
 
-src/Simple-Path-Tracer/main.s: src/Simple-Path-Tracer/main.cpp.s
+src/Simple-Ray-Tracer/Surfaces/Sphere.s: src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/main.s
+.PHONY : src/Simple-Ray-Tracer/Surfaces/Sphere.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/main.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/main.cpp.s
-.PHONY : src/Simple-Path-Tracer/main.cpp.s
+src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.s
+.PHONY : src/Simple-Ray-Tracer/Surfaces/Sphere.cpp.s
 
-src/Simple-Path-Tracer/util.o: src/Simple-Path-Tracer/util.cpp.o
+src/Simple-Ray-Tracer/main.o: src/Simple-Ray-Tracer/main.cpp.o
 
-.PHONY : src/Simple-Path-Tracer/util.o
+.PHONY : src/Simple-Ray-Tracer/main.o
 
 # target to build an object file
-src/Simple-Path-Tracer/util.cpp.o:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o
-.PHONY : src/Simple-Path-Tracer/util.cpp.o
+src/Simple-Ray-Tracer/main.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/main.cpp.o
+.PHONY : src/Simple-Ray-Tracer/main.cpp.o
 
-src/Simple-Path-Tracer/util.i: src/Simple-Path-Tracer/util.cpp.i
+src/Simple-Ray-Tracer/main.i: src/Simple-Ray-Tracer/main.cpp.i
 
-.PHONY : src/Simple-Path-Tracer/util.i
+.PHONY : src/Simple-Ray-Tracer/main.i
 
 # target to preprocess a source file
-src/Simple-Path-Tracer/util.cpp.i:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.i
-.PHONY : src/Simple-Path-Tracer/util.cpp.i
+src/Simple-Ray-Tracer/main.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/main.cpp.i
+.PHONY : src/Simple-Ray-Tracer/main.cpp.i
 
-src/Simple-Path-Tracer/util.s: src/Simple-Path-Tracer/util.cpp.s
+src/Simple-Ray-Tracer/main.s: src/Simple-Ray-Tracer/main.cpp.s
 
-.PHONY : src/Simple-Path-Tracer/util.s
+.PHONY : src/Simple-Ray-Tracer/main.s
 
 # target to generate assembly for a file
-src/Simple-Path-Tracer/util.cpp.s:
-	$(MAKE) -f CMakeFiles/SimplePathTracer.dir/build.make CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.s
-.PHONY : src/Simple-Path-Tracer/util.cpp.s
+src/Simple-Ray-Tracer/main.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/main.cpp.s
+.PHONY : src/Simple-Ray-Tracer/main.cpp.s
+
+src/Simple-Ray-Tracer/util.o: src/Simple-Ray-Tracer/util.cpp.o
+
+.PHONY : src/Simple-Ray-Tracer/util.o
+
+# target to build an object file
+src/Simple-Ray-Tracer/util.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/util.cpp.o
+.PHONY : src/Simple-Ray-Tracer/util.cpp.o
+
+src/Simple-Ray-Tracer/util.i: src/Simple-Ray-Tracer/util.cpp.i
+
+.PHONY : src/Simple-Ray-Tracer/util.i
+
+# target to preprocess a source file
+src/Simple-Ray-Tracer/util.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/util.cpp.i
+.PHONY : src/Simple-Ray-Tracer/util.cpp.i
+
+src/Simple-Ray-Tracer/util.s: src/Simple-Ray-Tracer/util.cpp.s
+
+.PHONY : src/Simple-Ray-Tracer/util.s
+
+# target to generate assembly for a file
+src/Simple-Ray-Tracer/util.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleRayTracer.dir/build.make CMakeFiles/SimpleRayTracer.dir/src/Simple-Ray-Tracer/util.cpp.s
+.PHONY : src/Simple-Ray-Tracer/util.cpp.s
 
 # Help Target
 help:
@@ -372,36 +372,36 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... SimplePathTracer"
-	@echo "... src/Simple-Path-Tracer/Camera.o"
-	@echo "... src/Simple-Path-Tracer/Camera.i"
-	@echo "... src/Simple-Path-Tracer/Camera.s"
-	@echo "... src/Simple-Path-Tracer/Materials/Dielectric.o"
-	@echo "... src/Simple-Path-Tracer/Materials/Dielectric.i"
-	@echo "... src/Simple-Path-Tracer/Materials/Dielectric.s"
-	@echo "... src/Simple-Path-Tracer/Materials/Diffuse.o"
-	@echo "... src/Simple-Path-Tracer/Materials/Diffuse.i"
-	@echo "... src/Simple-Path-Tracer/Materials/Diffuse.s"
-	@echo "... src/Simple-Path-Tracer/Materials/Metal.o"
-	@echo "... src/Simple-Path-Tracer/Materials/Metal.i"
-	@echo "... src/Simple-Path-Tracer/Materials/Metal.s"
-	@echo "... src/Simple-Path-Tracer/PathTracer.o"
-	@echo "... src/Simple-Path-Tracer/PathTracer.i"
-	@echo "... src/Simple-Path-Tracer/PathTracer.s"
-	@echo "... src/Simple-Path-Tracer/Ray.o"
-	@echo "... src/Simple-Path-Tracer/Ray.i"
-	@echo "... src/Simple-Path-Tracer/Ray.s"
-	@echo "... src/Simple-Path-Tracer/Surfaces/Sphere.o"
-	@echo "... src/Simple-Path-Tracer/Surfaces/Sphere.i"
-	@echo "... src/Simple-Path-Tracer/Surfaces/Sphere.s"
-	@echo "... src/Simple-Path-Tracer/main.o"
-	@echo "... src/Simple-Path-Tracer/main.i"
-	@echo "... src/Simple-Path-Tracer/main.s"
-	@echo "... src/Simple-Path-Tracer/util.o"
-	@echo "... src/Simple-Path-Tracer/util.i"
-	@echo "... src/Simple-Path-Tracer/util.s"
+	@echo "... rebuild_cache"
+	@echo "... SimpleRayTracer"
+	@echo "... src/Simple-Ray-Tracer/Camera.o"
+	@echo "... src/Simple-Ray-Tracer/Camera.i"
+	@echo "... src/Simple-Ray-Tracer/Camera.s"
+	@echo "... src/Simple-Ray-Tracer/Materials/Dielectric.o"
+	@echo "... src/Simple-Ray-Tracer/Materials/Dielectric.i"
+	@echo "... src/Simple-Ray-Tracer/Materials/Dielectric.s"
+	@echo "... src/Simple-Ray-Tracer/Materials/Diffuse.o"
+	@echo "... src/Simple-Ray-Tracer/Materials/Diffuse.i"
+	@echo "... src/Simple-Ray-Tracer/Materials/Diffuse.s"
+	@echo "... src/Simple-Ray-Tracer/Materials/Metal.o"
+	@echo "... src/Simple-Ray-Tracer/Materials/Metal.i"
+	@echo "... src/Simple-Ray-Tracer/Materials/Metal.s"
+	@echo "... src/Simple-Ray-Tracer/Ray.o"
+	@echo "... src/Simple-Ray-Tracer/Ray.i"
+	@echo "... src/Simple-Ray-Tracer/Ray.s"
+	@echo "... src/Simple-Ray-Tracer/RayTracer.o"
+	@echo "... src/Simple-Ray-Tracer/RayTracer.i"
+	@echo "... src/Simple-Ray-Tracer/RayTracer.s"
+	@echo "... src/Simple-Ray-Tracer/Surfaces/Sphere.o"
+	@echo "... src/Simple-Ray-Tracer/Surfaces/Sphere.i"
+	@echo "... src/Simple-Ray-Tracer/Surfaces/Sphere.s"
+	@echo "... src/Simple-Ray-Tracer/main.o"
+	@echo "... src/Simple-Ray-Tracer/main.i"
+	@echo "... src/Simple-Ray-Tracer/main.s"
+	@echo "... src/Simple-Ray-Tracer/util.o"
+	@echo "... src/Simple-Ray-Tracer/util.i"
+	@echo "... src/Simple-Ray-Tracer/util.s"
 .PHONY : help
 
 

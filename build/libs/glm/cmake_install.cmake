@@ -1,4 +1,4 @@
-# Install script for directory: /home/santiago/code/graphics/Simple-Path-Tracer/libs/glm
+# Install script for directory: /home/santiago/code/graphics/Simple-Ray-Tracer/libs/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/santiago/code/graphics/Simple-Path-Tracer/build/libs/glm/glm/cmake_install.cmake")
+  include("/home/santiago/code/graphics/Simple-Ray-Tracer/build/libs/glm/glm/cmake_install.cmake")
 
 endif()
 

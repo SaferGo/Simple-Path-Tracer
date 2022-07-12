@@ -4,4 +4,4 @@ mkdir build
 cd build
 cmake ..
 make
-./../bin/SimplePathTracer
+./../bin/SimpleRayTracer
