@@ -78,7 +78,7 @@ void PathTraicer::run()
 {
    std::fstream outputImg;
 
-   outputImg.open("img.ppm", std::ios_base::out);
+   outputImg.open("../output/img.ppm", std::ios_base::out);
    if (!outputImg.is_open())
       std::cerr << "Failed to open file.\n";
    else
