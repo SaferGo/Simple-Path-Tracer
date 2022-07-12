@@ -1,6 +1,7 @@
 # Compiled object files
 *.o
 *.obj
+*.ppm
 
 # Executables
 *.out
