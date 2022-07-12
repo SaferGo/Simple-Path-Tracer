@@ -8,14 +8,13 @@ class Camera
 {
 public:
 
+   Camera();
    Camera(
          const glm::vec3 lookFrom,
          const glm::vec3 lookAt,
          const glm::vec3 vup,
          const float vfov,
-         const float aspect,
-         const float aperture,
-         const float focusDist
+         const float aspect
    );
    ~Camera();
 
@@ -24,6 +23,9 @@ public:
    glm::vec3 getHorizontal() const;
    glm::vec3 getVertical() const;
    float getLensRadius() const;
+
+   void enableDOF(const float apertureSize, const float focusDist);
+
    Ray getRay(const float u, const float v) const;
 
 private:
@@ -33,5 +35,11 @@ private:
    glm::vec3 m_horizontal;
    glm::vec3 m_vertical;
    glm::vec3 m_u, m_v, m_w;
-   float     m_lensRadius;
+   float m_vfov;
+   float m_aspect;
+
+   // Effects
+   bool m_DOFenabled;
+   // DOF
+   float m_lensRadius;
 };

@@ -1,4 +1,4 @@
-#include <Simple-Path-Tracer/Sphere.h>
+#include <Simple-Path-Tracer/Surfaces/Sphere.h>
 
 #include <Simple-Path-Tracer/HitInfo.h>
 #include <Simple-Path-Tracer/Material.h>

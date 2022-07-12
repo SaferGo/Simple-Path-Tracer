@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Simple-Path-Tracer/Ray.h>
-#include <Simple-Path-Tracer/HitInfo.h>
+#include <Simple-Path-Tracer/Surface.h>
 #include <Simple-Path-Tracer/Material.h>
 
 #include <glm/glm.hpp>
@@ -9,7 +9,7 @@
 #include <memory>
 #include <iostream>
 
-class Hitable
+class Surface
 {
 public:
 

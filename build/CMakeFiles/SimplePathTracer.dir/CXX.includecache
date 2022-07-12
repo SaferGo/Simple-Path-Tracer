@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+../include/Simple-Path-Tracer/PathTracer.h
+Simple-Path-Tracer/Ray.h
+-
+Simple-Path-Tracer/Camera.h
+-
+Simple-Path-Tracer/HitInfo.h
+-
+Simple-Path-Tracer/Surfaces/Sphere.h
+-
+memory
+-
+fstream
+-
+vector
+-
+
 ../libs/glm/glm/common.hpp
 detail/qualifier.hpp
 ../libs/glm/glm/detail/qualifier.hpp
@@ -1020,38 +1036,8 @@ Simple-Path-Tracer/Ray.h
 glm/glm.hpp
 -
 
-../src/Simple-Path-Tracer/Dielectric.h
-Simple-Path-Tracer/Material.h
--
-Simple-Path-Tracer/Ray.h
--
-glm/glm.hpp
--
-
-../src/Simple-Path-Tracer/Diffuse.h
-Simple-Path-Tracer/Material.h
--
-Simple-Path-Tracer/Ray.h
--
-glm/glm.hpp
--
-
 ../src/Simple-Path-Tracer/HitInfo.h
 glm/glm.hpp
--
-
-../src/Simple-Path-Tracer/Hitable.h
-Simple-Path-Tracer/Ray.h
--
-Simple-Path-Tracer/HitInfo.h
--
-Simple-Path-Tracer/Material.h
--
-glm/glm.hpp
--
-memory
--
-iostream
 -
 
 ../src/Simple-Path-Tracer/Material.h
@@ -1062,7 +1048,7 @@ Simple-Path-Tracer/HitInfo.h
 glm/glm.hpp
 -
 
-../src/Simple-Path-Tracer/Metal.h
+../src/Simple-Path-Tracer/Materials/Dielectric.h
 Simple-Path-Tracer/Material.h
 -
 Simple-Path-Tracer/Ray.h
@@ -1070,28 +1056,42 @@ Simple-Path-Tracer/Ray.h
 glm/glm.hpp
 -
 
-../src/Simple-Path-Tracer/PathTracer.h
+../src/Simple-Path-Tracer/Materials/Diffuse.h
+Simple-Path-Tracer/Material.h
+-
 Simple-Path-Tracer/Ray.h
 -
-Simple-Path-Tracer/Sphere.h
+glm/glm.hpp
 -
-Simple-Path-Tracer/Hitable.h
+
+../src/Simple-Path-Tracer/Materials/Metal.h
+Simple-Path-Tracer/Material.h
 -
-Simple-Path-Tracer/HitInfo.h
+Simple-Path-Tracer/Ray.h
 -
-memory
--
-fstream
--
-vector
+glm/glm.hpp
 -
 
 ../src/Simple-Path-Tracer/Ray.h
 glm/glm.hpp
 -
 
-../src/Simple-Path-Tracer/Sphere.h
-Simple-Path-Tracer/Hitable.h
+../src/Simple-Path-Tracer/Surface.h
+Simple-Path-Tracer/Ray.h
+-
+Simple-Path-Tracer/Surface.h
+-
+Simple-Path-Tracer/Material.h
+-
+glm/glm.hpp
+-
+memory
+-
+iostream
+-
+
+../src/Simple-Path-Tracer/Surfaces/Sphere.h
+Simple-Path-Tracer/Surface.h
 -
 Simple-Path-Tracer/Ray.h
 -
@@ -1103,13 +1103,25 @@ glm/glm.hpp
 -
 
 ../src/Simple-Path-Tracer/config.h
+glm/glm.hpp
+-
 
 ../src/Simple-Path-Tracer/util.h
 Simple-Path-Tracer/Ray.h
 -
+Simple-Path-Tracer/Camera.h
+-
 glm/glm.hpp
 -
+iostream
+-
+limits
+-
 random
+-
+vector
+-
+memory
 -
 
 /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/PathTracer.cpp
@@ -1123,15 +1135,13 @@ Simple-Path-Tracer/Camera.h
 -
 Simple-Path-Tracer/Ray.h
 -
-Simple-Path-Tracer/Sphere.h
+Simple-Path-Tracer/Surfaces/Sphere.h
 -
-Simple-Path-Tracer/Material.h
+Simple-Path-Tracer/Materials/Diffuse.h
 -
-Simple-Path-Tracer/Diffuse.h
+Simple-Path-Tracer/Materials/Metal.h
 -
-Simple-Path-Tracer/Metal.h
--
-Simple-Path-Tracer/Dielectric.h
+Simple-Path-Tracer/Materials/Dielectric.h
 -
 glm/glm.hpp
 -
@@ -1140,7 +1150,5 @@ iostream
 vector
 -
 memory
--
-limits
 -
 

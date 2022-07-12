@@ -1,4 +1,4 @@
-#include <Simple-Path-Tracer/Metal.h>
+#include <Simple-Path-Tracer/Materials/Metal.h>
 
 #include <Simple-Path-Tracer/Ray.h>
 #include <Simple-Path-Tracer/util.h>

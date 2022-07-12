@@ -21,11 +21,11 @@ add_executable(${PROJECT_NAME}
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/PathTracer.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Camera.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Ray.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Sphere.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Diffuse.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Dielectric.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Metal.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/util.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Surfaces/Sphere.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Materials/Diffuse.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Materials/Dielectric.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Path-Tracer/Materials/Metal.cpp"
 )
 
 target_include_directories(

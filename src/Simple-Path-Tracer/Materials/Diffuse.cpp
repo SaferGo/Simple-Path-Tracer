@@ -1,4 +1,4 @@
-#include <Simple-Path-Tracer/Diffuse.h>
+#include <Simple-Path-Tracer/Materials/Diffuse.h>
 
 #include <Simple-Path-Tracer/Ray.h>
 #include <Simple-Path-Tracer/util.h>

@@ -1,0 +1,11 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executables
+*.out
+
+# Builds
+build/
+bin/
+doc/

@@ -1,4 +1,4 @@
-#include <Simple-Path-Tracer/Dielectric.h>
+#include <Simple-Path-Tracer/Materials/Dielectric.h>
 
 #include <Simple-Path-Tracer/Ray.h>
 #include <Simple-Path-Tracer/util.h>

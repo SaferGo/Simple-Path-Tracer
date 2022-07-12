@@ -68,7 +68,6 @@ glm::vec3 util::getRefraction(
 
 }
 
-
 float util::schlick(const float cosine, const float refractiveIndex)
 {
    float r0 = (1.0 - refractiveIndex) / (1.0 + refractiveIndex);
@@ -76,7 +75,6 @@ float util::schlick(const float cosine, const float refractiveIndex)
 
    return r0 + (1.0 - r0) * glm::pow((1.0 - cosine), 5);
 }
-
 
 bool util::isRayEnteringIntoSurface(const Ray& in, glm::vec3 normal)
 {

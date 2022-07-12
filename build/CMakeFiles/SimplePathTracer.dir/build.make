@@ -109,61 +109,9 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Ray.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.s
 
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o: ../src/Simple-Path-Tracer/Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Sphere.cpp
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Sphere.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.i
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Sphere.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.s
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o: ../src/Simple-Path-Tracer/Diffuse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Diffuse.cpp
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Diffuse.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.i
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Diffuse.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.s
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o: ../src/Simple-Path-Tracer/Dielectric.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Dielectric.cpp
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Dielectric.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.i
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Dielectric.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.s
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o: ../src/Simple-Path-Tracer/Metal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Metal.cpp
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Metal.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.i
-
-CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Metal.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.s
-
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o: ../src/Simple-Path-Tracer/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/util.cpp
 
 CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.i: cmake_force
@@ -174,17 +122,69 @@ CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/util.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.s
 
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o: ../src/Simple-Path-Tracer/Surfaces/Sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Surfaces/Sphere.cpp
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Surfaces/Sphere.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.i
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Surfaces/Sphere.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.s
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o: ../src/Simple-Path-Tracer/Materials/Diffuse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Diffuse.cpp
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Diffuse.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.i
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Diffuse.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.s
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o: ../src/Simple-Path-Tracer/Materials/Dielectric.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Dielectric.cpp
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Dielectric.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.i
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Dielectric.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.s
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o: CMakeFiles/SimplePathTracer.dir/flags.make
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o: ../src/Simple-Path-Tracer/Materials/Metal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o -c /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Metal.cpp
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Metal.cpp > CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.i
+
+CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santiago/code/graphics/Simple-Path-Tracer/src/Simple-Path-Tracer/Materials/Metal.cpp -o CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.s
+
 # Object files for target SimplePathTracer
 SimplePathTracer_OBJECTS = \
 "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/main.cpp.o" \
 "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.o" \
 "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o" \
 "CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.o" \
-"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o" \
-"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o" \
-"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o" \
-"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o" \
-"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o"
+"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o" \
+"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o" \
+"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o" \
+"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o" \
+"CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o"
 
 # External object files for target SimplePathTracer
 SimplePathTracer_EXTERNAL_OBJECTS =
@@ -193,11 +193,11 @@ SimplePathTracer_EXTERNAL_OBJECTS =
 ../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/PathTracer.cpp.o
 ../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Camera.cpp.o
 ../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Ray.cpp.o
-../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Sphere.cpp.o
-../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Diffuse.cpp.o
-../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Dielectric.cpp.o
-../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Metal.cpp.o
 ../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/util.cpp.o
+../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Surfaces/Sphere.cpp.o
+../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Diffuse.cpp.o
+../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Dielectric.cpp.o
+../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/src/Simple-Path-Tracer/Materials/Metal.cpp.o
 ../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/build.make
 ../bin/SimplePathTracer: CMakeFiles/SimplePathTracer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/santiago/code/graphics/Simple-Path-Tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../bin/SimplePathTracer"

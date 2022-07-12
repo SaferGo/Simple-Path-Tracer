@@ -1,13 +1,13 @@
 #pragma once
 
-#include <Simple-Path-Tracer/Hitable.h>
+#include <Simple-Path-Tracer/Surface.h>
 #include <Simple-Path-Tracer/Ray.h>
 #include <Simple-Path-Tracer/HitInfo.h>
 #include <Simple-Path-Tracer/Material.h>
 
 #include <glm/glm.hpp>
 
-class Sphere: public Hitable
+class Sphere: public Surface
 {
 public:
 
