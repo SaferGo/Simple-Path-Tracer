@@ -5,11 +5,13 @@
 
 #include <glm/glm.hpp>
 
-Dielectric::Dielectric(const float otherRefractiveIndex)
-: m_refractiveIndex(otherRefractiveIndex)
+Dielectric::Dielectric(
+      const glm::vec3 otherAlbedo,
+      const float otherRefractiveIndex
+) : m_refractiveIndex(otherRefractiveIndex)
 {
    // Attenuation is always 1 because dielectric surfaces absorb nothing.
-   m_albedo = glm::vec3(1.0);
+   m_albedo = otherAlbedo;
 }
 
 Dielectric::~Dielectric() {}

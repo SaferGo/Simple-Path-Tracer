@@ -40,7 +40,7 @@ void RayTracer::initCamera()
 
 void RayTracer::initWorld()
 {
-   // Floor
+   //Floor
    world.push_back(
          std::make_unique<Sphere>(
             glm::vec3(0.0, -100.5, -1.0),
@@ -53,22 +53,23 @@ void RayTracer::initWorld()
          std::make_unique<Sphere>(
             glm::vec3(0.0, 0.0, -1.0),
             0.5,
-            new Diffuse(glm::vec3(0.1, 0.2, 0.5))
+            new Diffuse(glm::vec3(0.3, 0.4, 0.9))
          )
    );
       
    world.push_back(
          std::make_unique<Sphere>(
-            glm::vec3(1.3, 0.0, -1.0),
+            glm::vec3(1.3, 0.0, -2.0),
             0.5,
-            new Metal(glm::vec3(0.8, 0.6, 0.2), 0.0)
+            new Dielectric(glm::vec3(0.9, 0.1, 0.3), 1.3)
          )
    );
    world.push_back(
          std::make_unique<Sphere>(
-            glm::vec3(-1.2, 0.0, -1.0),
+            glm::vec3(-1.2, 0.0, -2.0),
             0.5,
-            new Dielectric(1.5)
+            new Metal(glm::vec3(0.2, 0.3, 0.9), 0.5)
+            //new Diffuse(glm::vec3(0.5, 0.2, 0.1))
          )
    );
 
@@ -78,7 +79,10 @@ void RayTracer::run()
 {
    std::fstream outputImg;
 
-   outputImg.open("../output/img.ppm", std::ios_base::out);
+   outputImg.open(
+         "../output/" + config::IMG_TITLE + ".ppm",
+         std::ios_base::out
+   );
    if (!outputImg.is_open())
       std::cerr << "Failed to open file.\n";
    else

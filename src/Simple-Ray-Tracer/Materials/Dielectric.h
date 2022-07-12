@@ -10,7 +10,7 @@ class Dielectric : public Material
 
 public:
 
-   Dielectric(const float otherRefractiveIndex);
+   Dielectric(const glm::vec3 otherAlbedo, const float otherRefractiveIndex);
    ~Dielectric() override;
 
    Ray scatter(
