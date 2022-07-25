@@ -18,10 +18,10 @@ add_subdirectory(${GLM_DIR} EXCLUDE_FROM_ALL)
 # Executable
 add_executable(${PROJECT_NAME} 
    "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/main.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/RayTracer.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Camera.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Ray.cpp"
-   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/util.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/RayTracer/RayTracer.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/RayTracer/Camera.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/RayTracer/Ray.cpp"
+   "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Math/util.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Surfaces/Sphere.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Materials/Diffuse.cpp"
    "${PROJECT_SOURCE_DIR}/Simple-Ray-Tracer/Materials/Dielectric.cpp"

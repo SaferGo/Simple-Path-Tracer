@@ -1,9 +1,9 @@
 #include <Simple-Ray-Tracer/RayTracer.h>
 
-#include <Simple-Ray-Tracer/config.h>
-#include <Simple-Ray-Tracer/util.h>
-#include <Simple-Ray-Tracer/Camera.h>
-#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/Settings/config.h>
+#include <Simple-Ray-Tracer/Math/util.h>
+#include <Simple-Ray-Tracer/RayTracer/Camera.h>
+#include <Simple-Ray-Tracer/RayTracer/Ray.h>
 #include <Simple-Ray-Tracer/Surfaces/Sphere.h>
 #include <Simple-Ray-Tracer/Materials/Diffuse.h>
 #include <Simple-Ray-Tracer/Materials/Metal.h>

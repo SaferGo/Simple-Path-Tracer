@@ -1,9 +1,9 @@
-#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/RayTracer/Ray.h>
 
 Ray::Ray() {}
 
 Ray::Ray(const glm::vec3& otherOrigin, const glm::vec3& otherDirection)
-: m_origin(otherOrigin), m_direction(otherDirection) {}
+   : m_origin(otherOrigin), m_direction(otherDirection) {}
 
 Ray::~Ray() = default;
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <Simple-Ray-Tracer/Material.h>
-#include <Simple-Ray-Tracer/Ray.h>
+#include <Simple-Ray-Tracer/Materials/Material.h>
+#include <Simple-Ray-Tracer/RayTracer/Ray.h>
 
 #include <glm/glm.hpp>
 

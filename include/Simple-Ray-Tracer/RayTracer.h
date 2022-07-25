@@ -1,8 +1,7 @@
 #pragma once
 
-#include <Simple-Ray-Tracer/Ray.h>
-#include <Simple-Ray-Tracer/Camera.h>
-#include <Simple-Ray-Tracer/HitInfo.h>
+#include <Simple-Ray-Tracer/RayTracer/Ray.h>
+#include <Simple-Ray-Tracer/RayTracer/Camera.h>
 #include <Simple-Ray-Tracer/Surfaces/Sphere.h>
 
 #include <memory>

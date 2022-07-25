@@ -1,7 +1,7 @@
 #include <Simple-Ray-Tracer/Materials/Diffuse.h>
 
-#include <Simple-Ray-Tracer/Ray.h>
-#include <Simple-Ray-Tracer/util.h>
+#include <Simple-Ray-Tracer/RayTracer/Ray.h>
+#include <Simple-Ray-Tracer/Math/util.h>
 
 #include <glm/glm.hpp>
 

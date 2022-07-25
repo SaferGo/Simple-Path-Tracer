@@ -8,8 +8,8 @@ namespace config
 {
    inline const std::string IMG_TITLE  = "output";
 
-   inline constexpr int RESOLUTION_W = 600; //200
-   inline constexpr int RESOLUTION_H = 400; //100
+   inline constexpr int RESOLUTION_W = 600;
+   inline constexpr int RESOLUTION_H = 400;
 
    // Antialiasing
    inline constexpr int N_SAMPLES    = 100;
